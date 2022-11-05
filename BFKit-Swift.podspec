@@ -22,7 +22,19 @@ Pod::Spec.new do |s|
     'Sources/BFKit/Linux/**/*.swift',
     'Sources/BFKit/Apple/CoreGraphics/*.swift',
     'Sources/BFKit/Apple/Foundation/*.swift',
-    'Sources/BFKit/Apple/UIKit/UIColor.swift'
+    'Sources/BFKit/Apple/UIKit/UIColor+Extensions.swift'
+    
+  s.tvos.deployment_target = '11.0'
+  s.tvos.source_files      =
+      'Sources/BFKit/Linux/**/*.swift',
+      'Sources/BFKit/Apple/CoreGraphics/*.swift',
+      'Sources/BFKit/Apple/Foundation/*.swift',
+      'Sources/BFKit/Apple/UIKit/*.swift'
+  s.tvos.exclude_files =
+      'Sources/BFKit/Apple/UIKit/UIPasteboard+Extensions.swift',
+      'Sources/BFKit/Apple/UIKit/UITextView+Extensions.swift',
+      'Sources/BFKit/Apple/UIKit/UITableView+Extensions.swift',
+      'Sources/BFKit/Apple/UIKit/UIToolbar+Extensions.swift',
 
   s.watchos.deployment_target = '3.0'
   s.watchos.source_files      =

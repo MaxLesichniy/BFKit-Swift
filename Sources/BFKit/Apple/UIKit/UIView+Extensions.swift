@@ -352,6 +352,7 @@ public extension UIView {
         addMotionEffect(motionEffectGroup)
     }
     
+    #if !os(tvOS)
     /// Take a screenshot of the current view
     ///
     /// - Parameter save: Save the screenshot in user pictures. Default is false.
@@ -377,6 +378,7 @@ public extension UIView {
         
         return image
     }
+    #endif
     
     /// Removes all subviews from current view
     func removeAllSubviews() {

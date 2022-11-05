@@ -102,6 +102,7 @@ public extension UITextField {
         self.delegate = delegate
     }
     
+    #if !os(tvOS)
     /// Paste the pasteboard text to UITextField.
     func pasteFromPasteboard() {
         text = UIPasteboard.getString()
@@ -115,4 +116,5 @@ public extension UITextField {
         
         UIPasteboard.copy(text: text)
     }
+    #endif
 }

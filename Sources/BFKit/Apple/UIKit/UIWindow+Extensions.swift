@@ -66,6 +66,7 @@ public func hideTouchOnScreen() {
 public extension UIWindow {
     // MARK: - Functions
 
+    #if !os(tvOS)
     /// Take a screenshot of current window and choose if save it or not.
     ///
     /// - Parameter save: Set to true to save, otherwise false.
@@ -116,6 +117,7 @@ public extension UIWindow {
 
         return image
     }
+    
 
     /// Take a screenshot of current window, choose if save it or not after a delay.
     ///
@@ -129,7 +131,8 @@ public extension UIWindow {
             completion(self.windowScreenshot(save: save))
         }
     }
-
+    #endif
+    
     /// Show touch on screen.
     func activateTouch() {
         guard !sendEventExchanged else {

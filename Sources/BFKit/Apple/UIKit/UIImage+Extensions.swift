@@ -207,7 +207,7 @@ public extension UIImage {
     ///
     /// - Returns: Returns the screen scale, based on the device.
     static func screenScale() -> CGFloat {
-        #if canImport(CoreImage)
+        #if canImport(UIKit)
             return UIScreen.main.scale
         #elseif canImport(WatchKit)
             return WKInterfaceDevice.current().screenScale
